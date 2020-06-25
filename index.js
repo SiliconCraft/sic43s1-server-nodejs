@@ -19,6 +19,12 @@ router.get('/', function(req, res) {
     var rlcStatus;
     var cmac;
 
+    console.log(uid);
+    console.log(tf);
+    console.log(ts);
+    console.log(rlc);
+    console.log(req.query);
+
     if ((uid != null && uid.length != 0 && uid.length == 14) &&
     (tf != null && tf.length != 0 && tf.length == 2) &&
     (ts != null && ts.length != 0 && ts.length == 8) &&
