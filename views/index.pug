@@ -1,0 +1,33 @@
+html
+    head 
+        title SIC43S1 Demonstration
+    body(style='padding: 3em 0.75em; font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;')
+        h2 SIC43S1 Demonstration
+        table(style='width: 100%; margin: 0 auto;', border='1')
+            tbody
+                tr
+                    th UID [7]
+                    td(colspan="3") #{Uid}
+                tr
+                    th Default Key
+                    td(colspan="3") #{Key}
+                tr 
+                    th 
+                    th From Tag
+                    th From Server
+                    th Result
+                tr 
+                    th Tamper Flag (HEX)
+                    td #{TamperFlag}
+                    td N/A
+                    td #{TFStatus}
+                tr 
+                    th Time Stamp (DEC)
+                    td #{TimeStamp}
+                    td N/A
+                    td N/A
+                tr 
+                    th Rolling code (HEX)
+                    td #{RLC}
+                    td #{RLC_s}
+                    td #{RLC_status}
