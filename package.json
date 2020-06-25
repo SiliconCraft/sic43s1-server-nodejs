@@ -2,7 +2,6 @@
   "name": "webserver_sic43s1_nodejs_opensource",
   "version": "1.0.0",
   "description": "sic43s1 node.js opensource by silicon craft technology PLC. 2020",
-  "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
     "node-aes-cmac": "^0.1.1",
@@ -14,5 +13,8 @@
     "start": "node index.js"
   },
   "author": "Silicon craft technology PLC.",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "~6.10.x"
+  }
 }
