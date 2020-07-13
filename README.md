@@ -102,11 +102,13 @@ To create and manage Google Cloud project using Google Cloud Console, please fol
 #### Step 2 : Creating App Engine 
 
 1. Click "Go to the App Engine dashboard" as the picture below.
-![alt text](https://drive.google.com/file/d/162V8FyL1kdB1iJAd83CozJOuUnDx5aLP/view?usp=sharing)
+
+<img src="/assets/images/GCP_Dashboard.JPG" > 
 
 1. select your project name on top left corner.
 1. click Activate Cloud Shell on top right corner to use browser shell command. The terminal Google Cloud Shell will be shown as the picture below.
-![alt text](https://drive.google.com/file/d/1xjx3INVnODdfwFSvdWd62AOsGZkki6Ud/view?usp=sharing)
+
+<img src="/assets/images/GCP_Shell_Terminal.JPG" > 
 
 1. update all component and continue update press "Y" (Optional)
 
