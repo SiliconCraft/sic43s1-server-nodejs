@@ -80,7 +80,7 @@ Use SIC43S1 Writer App on Android NFC Phone to customize SIC43S1 Tag as the expl
     
     <em>Note: The order of parameters can be changed.</em> 
     
-    <img src="/assets/images/SIC43S1%20Writer_NDEF_Setting.jpg" width="48">
+    <img src="/assets/images/SIC43S1%20Writer_NDEF_Setting.jpg" width="240">
 
 After completely customize SIC43S1 Tag with the setting above, each time you tap the SIC43S1 tag to NFC Phone (iPhone, Android or any NDEF support device), the web page will display a table of Tamper Flag, Time Stamp value and Smart Authenticated Code value which keep changing. Especially for the smart authenticated code value, it will be a match between "From Tag" and "From Server" column. This mean that server-side application (which calculate smart authenticated code based on same Smart Authenticated Code Key) can check the authenticity of SIC43S1 Tag.
 
@@ -178,7 +178,7 @@ Use SIC43S1 Writer App on Android NFC Phone to customize SIC43S1 Tag as the expl
     
     <em>Note: The order of parameters can be changed.</em> 
     
-    <img src="/assets/images/SIC43S1%20Writer_NDEF_Setting.jpg" width="48"> 
+    <img src="/assets/images/SIC43S1%20Writer_NDEF_Setting.jpg" width="240"> 
 
 After completely customize SIC43S1 Tag with the setting above, each time you tap the SIC43S1 tag to NFC Phone (iPhone, Android or any NDEF support device), the web page will display a table of Tamper Flag, Time Stamp value and Smart Authenticated Code value which keep changing. Especially for the smart authenticated code value, it will be a match between "From Tag" and "From Server" column. This mean that server-side application (which calculate smart authenticated code based on same Smart Authenticated Code Key) can check the authenticity of SIC43S1 Tag.
 
