@@ -57,6 +57,17 @@ router.get('/', function(req, res) {
             RLC: rlc,
             RLC_status: rlcStatus
         });
+    } else {
+        res.render("index", {
+            Uid: "N/A",
+            Key: "N/A",
+            TamperFlag: "N/A",
+            TimeStamp: "N/A",
+            TFStatus: "N/A",
+            RLC_s: "N/A",
+            RLC: "N/A",
+            RLC_status: "N/A"
+        });
     }
 });
 
