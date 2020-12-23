@@ -92,8 +92,7 @@ After completely customize SIC43S1 Tag with the setting above, each time you tap
 
 #### Step 1 : Creating and managing projects
  
-Google Cloud projects form the basis for creating and using all Google Cloud services. 
-To create and manage Google Cloud project using Google Cloud Console, please follow the step in [Creating and managing projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project)
+You can create and manage Google Cloud project using Google Cloud Console, please follow the step in [Creating and managing projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project)
 
 #### Step 2 : Creating App Engine 
 
