@@ -50,7 +50,7 @@ router.get('/', function(req, res) {
         res.render("index", {
             Uid: uid,
             Key: bufferKey.toString('hex').toUpperCase(),
-            TamperFlag: tf,
+            TemporaryFlag: tf,
             TimeStamp: parseInt(ts.toString('hex'), 16),
             TFStatus: tfStatus,
             RLC_s: cmac.toUpperCase(),
@@ -61,7 +61,7 @@ router.get('/', function(req, res) {
         res.render("index", {
             Uid: "N/A",
             Key: "N/A",
-            TamperFlag: "N/A",
+            TemporaryFlag: "N/A",
             TimeStamp: "N/A",
             TFStatus: "N/A",
             RLC_s: "N/A",
