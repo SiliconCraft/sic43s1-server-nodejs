@@ -13,10 +13,9 @@ This project provides an example Node.js with Express.js project for SIC43S1 Sma
 
 SIC43S1 Tag provides 4 distinct NDEF contents coded in Hexadecimal string which can be pass to web service directly. The contents including
 1. **UID** or **Unique ID** **:** 7-bytes UID of this Tag (i.e. "39493000012345")
-1. **Tamper Flag:** 1-byte content reflect status of tamper pin. 
-If tamper pin is connected to the GND, the result is "00". 
+1. **Temporary Flag:** 1-byte content of static value. 
 1. **Time-Stamp:** 4-bytes randomly increasing value (each step of increasing is 1 to 255). This content always increasing each time the tag has been read.
-1. **Smart Authenticated Code:** 16-bytes of stream cipher with input from Time-stamp, Tamper Flag and UID.
+1. **Smart Authenticated Code:** 16-bytes of stream cipher with input from Time-stamp, Temporary Flag and UID.
 
 ## Getting Started
 
@@ -78,7 +77,7 @@ Use SIC43S1 Writer App on Android NFC Phone to customize SIC43S1 Tag as the expl
     * **Parameter 3:** "TS"
     * **Parameter 4:** "SAC"
 
-After completely customize SIC43S1 Tag with the setting above, each time you tap the SIC43S1 tag to NFC Phone (iPhone, Android or any NDEF support device), the web page will display a table of Tamper Flag, Time Stamp value and Smart Authenticated Code value which keep changing. Especially for the smart authenticated code value, it will be a match between "From Tag" and "From Server" column. This mean that server-side application (which calculate smart authenticated code based on same Smart Authenticated Code Key) can check the authenticity of SIC43S1 Tag.
+After completely customize SIC43S1 Tag with the setting above, each time you tap the SIC43S1 tag to NFC Phone (iPhone, Android or any NDEF support device), the web page will display a table of Temporary Flag, Time Stamp value and Smart Authenticated Code value which keep changing. Especially for the smart authenticated code value, it will be a match between "From Tag" and "From Server" column. This mean that server-side application (which calculate smart authenticated code based on same Smart Authenticated Code Key) can check the authenticity of SIC43S1 Tag.
 
 
 ### Installing on Google Cloud Platform
@@ -176,7 +175,7 @@ Use SIC43S1 Writer App on Android NFC Phone to customize SIC43S1 Tag as the expl
     * **Parameter 3:** "TS"
     * **Parameter 4:** "SAC"
 
-After completely customize SIC43S1 Tag with the setting above, each time you tap the SIC43S1 tag to NFC Phone (iPhone, Android or any NDEF support device), the web page will display a table of Tamper Flag, Time Stamp value and Smart Authenticated Code value which keep changing. Especially for the smart authenticated code value, it will be a match between "From Tag" and "From Server" column. This mean that server-side application (which calculate smart authenticated code based on same Smart Authenticated Code Key) can check the authenticity of SIC43S1 Tag.
+After completely customize SIC43S1 Tag with the setting above, each time you tap the SIC43S1 tag to NFC Phone (iPhone, Android or any NDEF support device), the web page will display a table of Temporary Flag, Time Stamp value and Smart Authenticated Code value which keep changing. Especially for the smart authenticated code value, it will be a match between "From Tag" and "From Server" column. This mean that server-side application (which calculate smart authenticated code based on same Smart Authenticated Code Key) can check the authenticity of SIC43S1 Tag.
 
 
 ## Usage
@@ -189,7 +188,7 @@ To verify consistence of smart authenticated code, you can use AES-CMAC from npm
 
 you can require the module exposes a single method: *aesCmac(key, message[, options])*
 
-The package *aesCmac* module of 'node-aes-cmac' package calculate smart authenticated code. It requires *128 bits-Key* (input as a 32-characters hexadecimal string) and *32 bits Time Stamp* + *56 bits UID* + *16 bits of Tamper Flag* (input as a 26-characters hexadecimal string).
+The package *aesCmac* module of 'node-aes-cmac' package calculate smart authenticated code. It requires *128 bits-Key* (input as a 32-characters hexadecimal string) and *32 bits Time Stamp* + *56 bits UID* + *16 bits of Temporary Flag* (input as a 26-characters hexadecimal string).
 
 ### 2: Verify increasing of time-stamp value
 
