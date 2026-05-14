@@ -39,9 +39,9 @@ router.get('/', function(req, res) {
             rlcStatus = "Correct";
 
             if ( tf === '00' ) {
-                tfStatus = 'SEALED';
+                tfStatus = 'N/A';
             } else {
-                tfStatus = 'OPENED';
+                tfStatus = 'N/A';
             }
         } else {
             rlcStatus = "Incorrect";
