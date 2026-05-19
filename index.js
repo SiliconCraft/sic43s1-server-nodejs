@@ -152,92 +152,9 @@ router.get('/', function (req, res) {
         SAC_s: "N/A",
         SAC_status: "N/A"
     });
-
-
-    // var tfStatus;
-    // var rlcStatus;
-    // var cmac;
-
-    // // For test
-    // const keyTest = Buffer.from('FFFF394A20000D69E6394A20000D69E6', 'hex');
-    // const ivTest = Buffer.from('000019F8', 'hex');
-
-    // console.log('check1');
-
-    // const decipher = crypto.createDecipheriv('aes-128-ocb', keyTest, ivTest, {
-    //     authTagLength: 4
-    // });
-    // console.log('check2');
-
-    // // Attach the authentication tag before calling update/final
-    // decipher.setAuthTag(Buffer.from('C884AE9B', 'hex'));
-    // console.log('check3');
-
-
-    // let decrypted = decipher.update('3D37F7355999EDA846453A3F1FAD0741BE71B6FED04FB35D8B2C1929FFF0AA97C6E0EAA47413CB6B95', 'hex');
-    // console.log(decrypted.toString('hex'));
-
-    // console.log(decipher.final('hex'))
-
-    // let output = decrypted.toString('hex');
-    // console.log(output);
-
-    // //
-
-    // if ((uid != null && uid.length != 0 && uid.length == 14) &&
-    //     (tf != null && tf.length != 0 && tf.length == 2) &&
-    //     (ts != null && ts.length != 0 && ts.length == 8) &&
-    //     (rlc != null && rlc.length != 0 && rlc.length == 32)) {
-
-    //     var bufferKey = Buffer.from(('FFFF' + uid + uid), 'hex');
-    //     var bufferMessage = Buffer.from((ts + uid + (Buffer.from(tf).toString('hex'))), 'hex');
-    //     var options = { returnAsBuffer: true };
-    //     cmac = nodeAesCmac(bufferKey, bufferMessage, options).toString('hex');
-
-    //     if (cmac.toUpperCase() === rlc) {
-    //         rlcStatus = "Correct";
-
-    //         if (tf === '00') {
-    //             tfStatus = 'N/A';
-    //         } else {
-    //             tfStatus = 'N/A';
-    //         }
-    //     } else {
-    //         rlcStatus = "Incorrect";
-    //     }
-
-    //     res.render("index", {
-    //         Uid: uid,
-    //         Key: bufferKey.toString('hex').toUpperCase(),
-    //         TemporaryFlag: tf,
-    //         TimeStamp: parseInt(ts.toString('hex'), 16),
-    //         TFStatus: tfStatus,
-    //         RLC_s: cmac.toUpperCase(),
-    //         RLC: rlc,
-    //         RLC_status: rlcStatus
-    //     });
-    // } else {
-    //     res.render("index", {
-    //         Uid: "N/A",
-    //         Key: "N/A",
-    //         TemporaryFlag: "N/A",
-    //         TimeStamp: "N/A",
-    //         TFStatus: "N/A",
-    //         RLC_s: "N/A",
-    //         RLC: "N/A",
-    //         RLC_status: "N/A"
-    //     });
-    // }
 });
 
 app.use("/", router);
-
-// catch 404 and forward to error handler
-// app.use(function (req, res, next) {
-//     var err = new Error('Not Found');
-//     err.status = 404;
-//     next(err);
-// });
 
 app.set('port', process.env.PORT || 8080);
 
