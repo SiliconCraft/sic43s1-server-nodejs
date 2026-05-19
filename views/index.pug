@@ -2,7 +2,7 @@ html
     head 
         title SIC43S1 Demonstration
     body(style='padding: 3em 0.75em; font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;')
-        h2 SIC43S1 Demonstration
+        h2 #{Title}
         table(style='width: 100%; margin: 0 auto;', border='1')
             tbody
                 tr
@@ -16,18 +16,45 @@ html
                     th From Tag
                     th From Server
                     th Result
-                tr 
-                    th Temporary Flag (HEX)
-                    td #{TemporaryFlag}
-                    td N/A
-                    td #{TFStatus}
-                tr 
-                    th Time Stamp (DEC)
-                    td #{TimeStamp}
-                    td N/A
-                    td N/A
-                tr 
-                    th Rolling code (HEX)
-                    td #{RLC}
-                    td #{RLC_s}
-                    td #{RLC_status}
+                if IsOcb
+                    tr 
+                        th Secured Authenticated Code (HEX)
+                        td #{SAC}
+                        td -
+                        td -
+                    tr 
+                        th Time Stamp (DEC)
+                        td #{TimeStamp}
+                        td -
+                        td -
+                    tr 
+                        th User Data (HEX)
+                        td -
+                        td #{UserData_s}
+                        td -
+                    tr
+                        th Verified UID (HEX)
+                        td #{Uid}
+                        td #{Uid_s}
+                        td #{Uid_status}
+                    tr
+                        th Temporary Flag (HEX)
+                        td #{TemporaryFlag}
+                        td #{TemporaryFlag_s}
+                        td #{TemporaryFlag_status}
+                else
+                    tr 
+                        th Temporary Flag (HEX)
+                        td #{TemporaryFlag}
+                        td -
+                        td -
+                    tr 
+                        th Time Stamp (DEC)
+                        td #{TimeStamp}
+                        td -
+                        td -
+                    tr 
+                        th Rolling code (HEX)
+                        td #{SAC}
+                        td #{SAC_s}
+                        td #{SAC_status}

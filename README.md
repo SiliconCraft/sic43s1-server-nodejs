@@ -13,9 +13,9 @@ This project provides an example Node.js with Express.js project for SIC43S1 Sma
 
 SIC43S1 Tag provides 4 distinct NDEF contents coded in Hexadecimal string which can be pass to web service directly. The contents including
 1. **UID** or **Unique ID** **:** 7-bytes UID of this Tag (i.e. "39493000012345")
-1. **Temporary Flag:** 1-byte content of static value. 
+1. **Temporary Flag:** 2-byte content of static value. 
 1. **Time-Stamp:** 4-bytes randomly increasing value (each step of increasing is 1 to 255). This content always increasing each time the tag has been read.
-1. **Smart Authenticated Code:** 16-bytes of stream cipher with input from Time-stamp, Temporary Flag and UID.
+1. **Secured Authenticated Code:** 16-bytes of stream cipher with input from Time-stamp, Temporary Flag and UID.
 
 ## Getting Started
 
@@ -24,7 +24,9 @@ SIC43S1 Tag provides 4 distinct NDEF contents coded in Hexadecimal string which 
 #### Prerequisites
 
 * SIC43S1 Tag
-* Android NFC Phone with [SIC43S1 Writer](https://play.google.com/store/apps/details?id=com.sic.s1writer) App
+* NFC Phone with NFC Tag Encoder App
+  * Android: [NFC Tag Encoder](https://play.google.com/store/apps/details?id=th.co.sic.nfc_tag_encoder)
+  * iOS: [NFC Tag Encoder](https://apps.apple.com/us/app/nfc-tag-encoder/id6740401948)
 * [Microsoft Azure Account](https://azure.microsoft.com/) 
 * [Azure Command Line / Azure CLI](https://docs.microsoft.com/en-us/cli/azure) from [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) in Azure Portal or locally [install](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) on your macOS, Linux or Window machine.
 
@@ -59,7 +61,7 @@ az webapp deployment source config --repo-url https://github.com/SiliconCraft/si
 ```
 
 #### Step 5 : Customize SIC43S1 Tag
-Use SIC43S1 Writer App on Android NFC Phone to customize SIC43S1 Tag as the explanation below.
+Use NFC Tag Encoder on Android/iOS NFC Phone to customize SIC43S1 Tag as the explanation below.
 
 * SAC setting (In case of default tag, this SAC mode can leave with default factory value)
   * **'DYNAMIC DATA' tab**
@@ -85,7 +87,9 @@ After completely customize SIC43S1 Tag with the setting above, each time you tap
 #### Prerequisites
 
 * SIC43S1 Tag
-* Android NFC Phone with [SIC43S1 Writer](https://play.google.com/store/apps/details?id=com.sic.s1writer) App
+* NFC Phone with NFC Tag Encoder App
+  * Android: [NFC Tag Encoder](https://play.google.com/store/apps/details?id=th.co.sic.nfc_tag_encoder)
+  * iOS: [NFC Tag Encoder](https://apps.apple.com/us/app/nfc-tag-encoder/id6740401948)
 * [Google Cloud Console Account](https://console.cloud.google.com/) 
 * Google Cloud App Engine
 
